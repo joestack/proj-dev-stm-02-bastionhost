@@ -23,6 +23,9 @@ variable "pri_key" {
   description = "the base64 encoded private key to be used to access the bastion host and ansible nodes"
 }
 
+variable "ssh_user" {
+    default = "ubuntu"
+}
 
 locals {
   priv_key = base64decode(var.pri_key)
